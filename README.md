@@ -16,7 +16,7 @@ AWSリソースのデプロイ
 npx cdk deploy
 ```
 
-アプリケーション推論プロファイルの作成
+アプリケーション推論プロファイルの確認
 ```bash
 aws bedrock list-inference-profiles \
   --region 'us-west-2' \
