@@ -1,0 +1,29 @@
+{
+	"name": "bedrock-application-inference-sample",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -w",
+		"cdk": "cdk",
+		"check": "npm run check:type && npm run check:lint && npm run check:format",
+		"check:lint": "biome lint .",
+		"check:format": "biome format .",
+		"check:type": "tsc --noEmit",
+		"fix": "biome check . --unsafe --write"
+	},
+	"devDependencies": {
+		"@types/node": "^22.15.21",
+		"aws-cdk": "^2.1016.1",
+		"tsx": "^4.19.4",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"@cdklabs/generative-ai-cdk-constructs": "^0.1.309",
+		"aws-cdk-lib": "^2.197.0",
+		"change-case": "^5.4.4",
+		"constructs": "^10.4.2",
+		"source-map-support": "^0.5.21"
+	}
+}
