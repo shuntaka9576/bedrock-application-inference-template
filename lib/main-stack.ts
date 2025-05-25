@@ -10,7 +10,10 @@ export class MainStack extends cdk.Stack {
 	constructor(scope: Construct, id: string, props?: cdk.StackProps) {
 		super(scope, id, props);
 
-		const modelId = "anthropic.claude-sonnet-4-20250514-v1:0";
+		// const sonnet4ModelId = "anthropic.claude-sonnet-4-20250514-v1:0";
+		const sonnet3ModelId = "anthropic.claude-3-7-sonnet-20250219-v1:0";
+		const modelId = sonnet3ModelId;
+
 		const model = new bedrock.BedrockFoundationModel(modelId, {
 			supportsAgents: true,
 			supportsCrossRegion: true,
